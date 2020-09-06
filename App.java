@@ -24,6 +24,14 @@ public class App
 
         System.out.println();
 
-        numbers.forEach(System.out::println);
+        numbers.forEach(System.out::println);  // HERE
+
+        System.out.println();
+
+        // Instance Method Reference -> OBJECT
+        FaultySoftware bug = new FaultySoftware();
+        numbers.forEach(bug::printAllNumbers);  // HERE
     }
+
+
 }
