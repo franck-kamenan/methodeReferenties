@@ -31,6 +31,16 @@ public class App
         // Instance Method Reference -> OBJECT
         FaultySoftware bug = new FaultySoftware();
         numbers.forEach(bug::printAllNumbers);  // HERE
+
+        // Constructor Method Reference
+        String original = "Hello";
+
+        System.out.println("\n*** Scrambled content ***");
+
+        Scrambler scrambler = new Scrambler(original, 42);
+        scrambler.parse(Integer::new);
+
+        System.out.println(Arrays.toString(scrambler.getScrambled()));
     }
 
 
